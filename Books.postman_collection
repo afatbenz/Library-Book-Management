@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "323a2827-c0ce-4020-8b1f-6e77cf7a93b6",
+		"name": "MongoBooks CodeX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21153478"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"dummyuser\",\r\n    \"password\": \"inipassword\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3100/api/user/submit",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"api",
+								"user",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"dummyuser\",\r\n    \"password\": \"inipassword\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3100/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Create Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "1GOwr6IUlEeg92cplmwQUtxEUd6ZKkSrajm/C4y3EhIUQL7K4rDoTuVSDHJn+O5L3ErszSmBQuYYnS+ayR5/JzizAJDdQlgf5HY5RXO3MPwjxJ9Ln8/2COALjvuyzYmlIAx+ZsGC0dLJQRmtqKMFAO0bgcG2OGMzrA1FwrbjU85tdMcaH/iQqq62nYZsWCBdUFDgB5oPPBfeCG4E9fRyfQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Dummy Book 3\",\r\n    \"author\": \"Author\",\r\n    \"genre\": \"Technology\",\r\n    \"desc\": \"It is Description of Dummy Book 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3100/api/book/submit",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"api",
+								"book",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3100/api/book/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"api",
+								"book",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book Detail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"6395f0d5d181b93cdea5e9c0\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3100/api/book/detail",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"api",
+								"book",
+								"detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "1GOwr6IUlEeg92cplmwQUtxEUd6ZKkSrajm/C4y3EhIUQL7K4rDoTuVSDHJn+O5L3ErszSmBQuYYnS+ayR5/JzizAJDdQlgf5HY5RXO3MPy95J2mrPH44gTEtR1+gvs9u9Z0IeXDjj5gGMyAkDK0FoV43iKr6e3xnQg8NuMsdVLk+n9c4TptLDCnPIYM0g71apdd5TKZ6tq7qpsBj1wHDQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"6395dcdde2cf27546205fdf1\",\r\n    \"title\": \"Dummy Book 3\",\r\n    \"author\": \"Author\",\r\n    \"genre\": \"Technology\",\r\n    \"desc\": \"It is Description of Dummy Book 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3100/api/book/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"api",
+								"book",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book Deletion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "1GOwr6IUlEeg92cplmwQUtxEUd6ZKkSrajm/C4y3EhIUQL7K4rDoTuVSDHJn+O5L3ErszSmBQuYYnS+ayR5/JzizAJDdQlgf5HY5RXO3MPy95J2mrPH44gTEtR1+gvs9u9Z0IeXDjj5gGMyAkDK0FoV43iKr6e3xnQg8NuMsdVLk+n9c4TptLDCnPIYM0g71apdd5TKZ6tq7qpsBj1wHDQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"6395dcdde2cf27546205fdf1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3100/api/book/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"api",
+								"book",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Pickup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "1GOwr6IUlEeg92cplmwQUmhp0PeDwpavTicLW0Lrsch/Z3i2qCFtxMM34Qq+xevh1dOek6DaXgNjKxRDCnxaI+842luAYlJUIyHTFRlkq/yJNasyRXzlTtuMhJMcYp97NDu2X8CaFiya6NdLIsBnsDOeQPw2QoTCLAc3zVGifE8tCc6KUPjETrWQqAbCatG5D8CRVwYITB08TjfcqnXpSQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"6395f0d5d181b93cdea5e9c0\",\r\n    \"pickupDate\": \"2022-12-12 10:10:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3100/api/book/submit-pickup",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"api",
+								"book",
+								"submit-pickup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
