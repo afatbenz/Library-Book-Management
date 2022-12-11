@@ -20,5 +20,5 @@ OK, follow these steps
 
 
 ## Want an example of using the API?
-Yes, you just need to import our postman collection. You can get it [here](https://github.com/afatbenz/MongoDB-CRUD/blob/main/db/Books.postman_collection.json).
+Yes, you just need to import our postman collection. You can get it [here](https://github.com/afatbenz/Library-Book-Management/blob/main/Books.postman_collection).
 You only need to change the payload, query and parameters that have been provided
